@@ -1,8 +1,6 @@
 package com.cpe.asi2.atelier1.dto;
 
-import java.util.List;
-
-public class CardDTO {
+public class PublicCardDTO {
 	private Integer id;
 	private float energy;
 	private float hp;
@@ -17,13 +15,13 @@ public class CardDTO {
 	private String imgUrl;
 	private String smallImgUrl;
 
-	public CardDTO() {}
+	public PublicCardDTO() {}
 
 	// Pour résoudre le soucis de DTO, je vais devoir en créer un nouveau qui soit dépendant de personne et qui refait tous les attributs.
 	// Au lieu d'avoir des Users on aura des IDs ce qui découple.
-	// Enfin, on utilise un mapper pour que ce DTO publique puisse s'interfacer avec le DTO privé du monolythique.
+	// Enfin, on utilise un mapper pour que ce DTO publique puisse s'interfacer avec le DTO privé du monolithique.
 	
-	public CardDTO(Integer id,
+	public PublicCardDTO(Integer id,
 			float energy, 
 			float hp, 
 			float defence, 
